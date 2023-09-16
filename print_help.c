@@ -40,9 +40,9 @@ int _print_err(int errorcode, vars_of_project *data)
 		_prte(": ");
 		_prte(data->toks[0]);
 		if (errorcode == 2)
-			_prte(": Illegal number: ");
+			_prte(": Unsupported number: ");
 		else
-			_prte(": can't do cd to ");
+			_prte(": Can't change directory ");
 		_prte(data->toks[1]);
 		_prte("\n");
 	}
@@ -53,7 +53,7 @@ int _print_err(int errorcode, vars_of_project *data)
 		_prte(n_like_str);
 		_prte(": ");
 		_prte(data->cmd_name);
-		_prte(": not found\n");
+		_prte(": Not Found\n");
 	}
 	else if (errorcode == 126)
 	{
@@ -62,7 +62,7 @@ int _print_err(int errorcode, vars_of_project *data)
 		_prte(n_like_str);
 		_prte(": ");
 		_prte(data->cmd_name);
-		_prte(": Permission denied\n");
+		_prte(": restricted privilege\n");
 	}
 	return (0);
 }

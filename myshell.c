@@ -59,7 +59,7 @@ void start_data(vars_of_project *data, int argc, char *argv[], char **env)
 		if (data->descr_file == -1)
 		{
 			_prte(data->prog_name);
-			_prte(": 0: Can't open ");
+			_prte(": 0: Can not open ");
 			_prte(argv[1]);
 			_prte("\n");
 			exit(127);
